@@ -1,45 +1,55 @@
-.form1{
-    display:inline-block;
+.form1 {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     border: gray solid 5px;
-    padding: 10px;
+    padding: 20px;
     background-color: rgb(0, 0, 0);
     border-radius: 30px;
-    margin: 10px;
+    margin: 10px auto; /* Centers the form horizontally */
     height: 75vh;
     width: 700px;
     color: whitesmoke;
 }
 
-.textbox{
+.textbox {
     height: 30px;
     border-radius: 20px;
-    width: 30%;
+    width: 100%; /* Makes the textbox fill the available width */
+    max-width: 300px; /* Maximum width of the textbox */
     font-size: 15px;
     padding-left: 10px;
+    margin-bottom: 10px; /* Adds space between inputs */
 }
-#title{
+
+#title {
     text-align: center;
     font-size: 30px;
 }
 
-.submit{
+.submit {
     background-color: rgb(255, 255, 255);
     color: black;
     padding: 10px 20px;
-    margin: 8px 0;
+    margin: 10px 0;
     border-radius: 10px;
     cursor: pointer;
 }
+
 .submit:hover {
     background-color: rgb(60, 165, 246);
     color: white;
 }
 
-.label{
+.label {
     font-size: 20px;
-    color:whitesmoke;
+    color: whitesmoke;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5px;
+}
+
+.required{
+    color: red;
 }

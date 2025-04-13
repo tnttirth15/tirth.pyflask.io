@@ -3,31 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Registration Form</title>
 </head>
 <body>
-    <form class="form1" action="http://www.google.com" method="get"><p id="title"><i class="fa-solid fa-user-plus"></i> SIGN UP</p>
-        <!--So this is how we create the label and the id of input and for attribute's proerty
-        remains equal as it increases the accecibility of your form.-->
-        <p><i class="fa-solid fa-user"></i><label class="label" for="firstTag">&nbsp;First Name:</label>
-            <input class="textbox" id="firstTag" type="text" name="firstname" placeholder="First Name"></p>
-
-        <p><i class="fa-solid fa-user"></i><label class="label" for="lastTag">&nbsp;Last Name:</label>
-            <input class="textbox" id="lastTag" type="text" name="lastname" placeholder="Last Name"></p>
-
-        <p><i class="fa-solid fa-envelope"></i><label class="label" for="emailTag">&nbsp;Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input class="textbox" id="emailTag" type="email" name="email" placeholder="Email"></p>
-
-        <p><i class="fa-solid fa-lock"></i><label class="label" for="passTag">&nbsp;Password:&nbsp;&nbsp;</label>
-            <input class="textbox" id="passTag" type="password" name="password" placeholder="Password"></p>
-
-        <p><input class="submit" type="submit" name="" value="Submit"></p>
+    <form class="form1" action="http://www.google.com" method="get">
+        <p id="title"><i class="fa-solid fa-user-plus"></i> SIGN UP</p>
+        
+        <!-- First Name -->
+        <p>
+            <i class="fa-solid fa-user"></i>
+            <label class="label" for="firstTag">First Name<span class="required">*</span></label>
+            <input class="textbox" id="firstTag" type="text" name="firstname" placeholder="First Name" required>
+        </p>
+    
+        <!-- Last Name -->
+        <p>
+            <i class="fa-solid fa-user"></i>
+            <label class="label" for="lastTag">Last Name<span class="required">*</span></label>
+            <input class="textbox" id="lastTag" type="text" name="lastname" placeholder="Last Name" required>
+        </p>
+    
+        <!-- Email -->
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            <label class="label" for="emailTag">Email<span class="required">*</span></label>
+            <input class="textbox" id="emailTag" type="email" name="email" placeholder="Email" required>
+        </p>
+    
+        <!-- Password -->
+        <p>
+            <i class="fa-solid fa-lock"></i>
+            <label class="label" for="passTag">Password<span class="required">*</span></label>
+            <input class="textbox" id="passTag" type="password" name="password" placeholder="Password" required>
+        </p>
+    
+        <!-- Submit Button -->
+        <p>
+            <input class="submit" type="submit" name="" value="Submit">
+        </p>
     </form>
+    
 
-    <p>How to make a dropdown menu?</p>
-        <select name="cars">
+    <p>Select Your Country<span class="required">*</span></p>
+        <select name="country">
             <option value="1">~Select~</option>
             <option value="2">Aston martin</option>
         </select>
