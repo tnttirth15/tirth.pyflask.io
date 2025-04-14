@@ -15,17 +15,37 @@
   </head>
 
   <body class="flex flex-col min-h-screen">
-    <!-- Header -->
+    <!-- Header with Hamburger Menu for All Devices -->
     <header
-      class="px-4 lg:px-6 h-16 flex items-center border-b border-gray-800 bg-black mobile-nav"
+      class="px-4 lg:px-6 h-16 flex items-center justify-between border-b border-gray-800 bg-black relative"
     >
-      <a class="flex items-center justify-center" href="https://tnttirth15.github.io/tirth.pyflask.io/" target="_blank">
+      <a
+        class="flex items-center justify-center"
+        href="https://tnttirth15.github.io/tirth.pyflask.io/"
+        target="_blank"
+      >
         <i class="fa-solid fa-user h-6 w-6 mr-2 text-blue-500"></i>
         <span class="font-bold text-white"
           ><span class="text-orange-400">Web</span>Tirth</span
         >
       </a>
-      <nav class="ml-auto flex gap-4 sm:gap-6 mobile-nav-links">
+
+      <!-- Navigation Controls -->
+      <div class="flex items-center gap-4">
+        <!-- Always visible Contact link -->
+        <a
+          class="text-sm font-medium hover:text-orange-400 text-white"
+          href="#contact"
+          >Contact Me</a
+        >
+        <!-- Hamburger Menu Button -->
+        <button id="mobileMenuButton" class="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Vertical Menu Dropdown (for all devices) -->
+      <div id="mobileMenu" class="mobile-menu">
         <a
           class="text-sm font-medium hover:text-orange-400 text-white"
           href="#about"
@@ -56,12 +76,7 @@
           href="#projects"
           >Projects</a
         >
-        <a
-          class="text-sm font-medium hover:text-orange-400 text-white"
-          href="#contact"
-          >Contact</a
-        >
-      </nav>
+      </div>
     </header>
 
     <main class="flex-1">
@@ -74,17 +89,13 @@
               <h1
                 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-white"
               >
-                Hello 👋🏻, I'm
+                Hello👋🏻! I'm
                 <span class="text-orange-500 font-semibold"
                   >Tirth Prajapati</span
                 >
               </h1>
               <p class="mx-auto max-w-[700px] text-gray-200 md:text-xl">
-                I'm a Full-Stack Developer driven by a passion for turning
-                complex ideas into seamless, user-centered digital experiences.
-                With a strong foundation in both front-end and back-end
-                technologies, I thrive on building scalable, high-performance
-                web applications that make a real impact.
+                Full Stack Developer
               </p>
             </div>
             <div class="space-x-4 pt-6 button-group">
@@ -122,9 +133,11 @@
                 <p
                   class="max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
                 >
-                  I'm a passionate developer with experience in building web
-                  applications. I specialize in front-end development and have a
-                  strong foundation in modern JavaScript frameworks.
+                I'm a Full-Stack Developer driven by a passion for turning
+                complex ideas into seamless, user-centered digital experiences.
+                With a strong foundation in both front-end and back-end
+                technologies, I thrive on building scalable, high-performance
+                web applications that make a real impact.
                 </p>
               </div>
               <div class="flex flex-col gap-2 min-[400px]:flex-row">
@@ -372,23 +385,11 @@
                     performance.
                   </li>
                 </ul>
-                <div class="mt-3 flex flex-wrap gap-2">
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Full Stack</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Git</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >SDLC</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Technical Leadership</span
-                  >
+                <div class="mt-3 skill-tags">
+                  <span class="skill-tag">Full Stack</span>
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">SDLC</span>
+                  <span class="skill-tag">Technical Leadership</span>
                 </div>
               </div>
             </div>
@@ -444,27 +445,12 @@
                     libraries to stay up-to-date with front-end technologies.
                   </li>
                 </ul>
-                <div class="mt-3 flex flex-wrap gap-2">
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Frontend</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Bootstrap</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >TDD</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >RESTful API</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >SQL</span
-                  >
+                <div class="mt-3 skill-tags">
+                  <span class="skill-tag">Frontend</span>
+                  <span class="skill-tag">Bootstrap</span>
+                  <span class="skill-tag">TDD</span>
+                  <span class="skill-tag">RESTful API</span>
+                  <span class="skill-tag">SQL</span>
                 </div>
               </div>
             </div>
@@ -497,36 +483,29 @@
 
             <!--Education 1-->
             <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="bg-gray-900 rounded-lg p-5 border border-gray-800">
-                  <div class="flex justify-between items-start mb-2">
-                    <h3 class="text-xl font-bold text-orange-500">
-                      Python and Flask Bootcamp
-                    </h3>
-                    <span class="text-sm text-gray-400">2025</span>
-                  </div>
-                  <h4 class="text-white text-lg mb-2">Pierian Data, Jose Portilla</h4>
-                  <p class="text-gray-400 text-sm">
-                    Intensive 12-week program covering modern Flask development
-                    technologies and practices. Building several full-stack
-                    applications as part of the curriculum.
-                  </p>
-                  <div class="mt-3 flex gap-2">
-                    <span
-                      class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                      >JavaScript</span
-                    >
-                    <span
-                      class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                      >React</span
-                    >
-                    <span
-                      class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                      >Node.js</span
-                    >
-                  </div>
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-900 rounded-lg p-5 border border-gray-800">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold text-orange-500">
+                    Python and Flask Bootcamp
+                  </h3>
+                  <span class="text-sm text-gray-400">2025</span>
+                </div>
+                <h4 class="text-white text-lg mb-2">
+                  Pierian Data, Jose Portilla
+                </h4>
+                <p class="text-gray-400 text-sm">
+                  Intensive 12-week program covering modern Flask development
+                  technologies and practices. Building several full-stack
+                  applications as part of the curriculum.
+                </p>
+                <div class="mt-3 skill-tags">
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Node.js</span>
                 </div>
               </div>
+            </div>
 
             <!-- Education 2-->
             <div class="timeline-item">
@@ -548,19 +527,10 @@
                   using Python, and designing registration systems using .NET
                   and C#.
                 </p>
-                <div class="mt-3 flex gap-2">
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Web Development</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Automation</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Desktop App Development</span
-                  >
+                <div class="mt-3 skill-tags">
+                  <span class="skill-tag">Web Development</span>
+                  <span class="skill-tag">Automation</span>
+                  <span class="skill-tag">Desktop App Development</span>
                 </div>
               </div>
             </div>
@@ -583,19 +553,10 @@
                   Participated in multiple hackathons and led the university's
                   coding club.
                 </p>
-                <div class="mt-3 flex gap-2">
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Web Development</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Algorithms</span
-                  >
-                  <span
-                    class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs"
-                    >Software Engineering</span
-                  >
+                <div class="mt-3 skill-tags">
+                  <span class="skill-tag">Web Development</span>
+                  <span class="skill-tag">Algorithms</span>
+                  <span class="skill-tag">Software Engineering</span>
                 </div>
               </div>
             </div>
@@ -604,45 +565,67 @@
       </section>
 
       <!-- Certifications Section -->
-      <section id="certifications" class="w-full py-12 md:py-24 lg:py-32 bg-black">
+      <section
+        id="certifications"
+        class="w-full py-12 md:py-24 lg:py-32 bg-black"
+      >
         <div class="container px-4 md:px-6 mx-auto">
-          <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+          <div
+            class="flex flex-col items-center justify-center space-y-4 text-center mb-12"
+          >
             <div class="space-y-2">
-              <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-orange-500">
+              <h2
+                class="text-3xl font-bold tracking-tighter sm:text-5xl text-orange-500"
+              >
                 Certifications
               </h2>
-              <p class="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p
+                class="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+              >
                 Professional certifications and specialized training
               </p>
             </div>
           </div>
 
           <div class="cert-grid max-w-6xl mx-auto">
-
             <!-- Certification 1 -->
-            <div class="bg-gray-900 rounded-lg p-5 border border-gray-800 h-full flex flex-col">
-              <div class="flex justify-between items-start mb-4">
+            <div
+              class="bg-gray-900 rounded-lg p-5 border border-gray-800 h-full flex flex-col"
+            >
+              <div
+                class="flex justify-between items-start mb-4 cert-card-content"
+              >
                 <div class="flex items-center">
                   <i class="fa-brands fa-aws text-blue-400 text-3xl mr-4"></i>
                   <div>
-                    <h3 class="text-xl font-bold text-orange-500">AWS Cloud Technical Essentials</h3>
+                    <h3 class="text-xl font-bold text-orange-500">
+                      AWS Cloud Technical Essentials
+                    </h3>
                     <p class="text-sm text-gray-400">Amazon</p>
                   </div>
                 </div>
-                <span class="text-sm text-gray-400">2023</span>
+                <span class="text-sm text-gray-400">2025</span>
               </div>
               <p class="text-gray-400 text-sm flex-grow">
-                Comprehensive certification covering React fundamentals, hooks, state management, and advanced patterns for building scalable applications.
+                Comprehensive certification covering React fundamentals, hooks,
+                state management, and advanced patterns for building scalable
+                applications.
               </p>
-              <div class="mt-4 flex justify-between items-center">
-                <div class="flex gap-2">
-                  <span class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs">Cloud</span>
-                  <span class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs">IAM</span>
-                  <span class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs">DynamoDB</span>
-                  <span class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs">ECS</span>
-                  <span class="inline-block bg-gray-800 text-gray-300 rounded-full px-3 py-1 text-xs">Lambda</span>
+              <div
+                class="mt-4 flex justify-between items-center cert-card-footer"
+              >
+                <div class="skill-tags">
+                  <span class="skill-tag">Cloud</span>
+                  <span class="skill-tag">IAM</span>
+                  <span class="skill-tag">DynamoDB</span>
+                  <span class="skill-tag">ECS</span>
+                  <span class="skill-tag">Lambda</span>
                 </div>
-                <a href="https://www.coursera.org/account/accomplishments/verify/2PGBOI37FKTE" class="text-orange-500 hover:text-orange-400 text-sm">View Certificate</a>
+                <a
+                  href="https://www.coursera.org/account/accomplishments/verify/2PGBOI37FKTE"
+                  class="text-orange-500 hover:text-orange-400 text-sm"
+                  >View Certificate</a
+                >
               </div>
             </div>
           </div>
@@ -686,7 +669,10 @@
               <div class="p-4">
                 <h3 class="text-xl font-bold text-orange-500">Tirthfolio</h3>
                 <p class="text-sm text-gray-400 mt-2">
-                    Designed and built a responsive developer portfolio from scratch to showcase my projects, skills, and background. The site emphasizes clean UI, smooth navigation, and device-friendly layouts.
+                  Designed and built a responsive developer portfolio from
+                  scratch to showcase my projects, skills, and background. The
+                  site emphasizes clean UI, smooth navigation, and
+                  device-friendly layouts.
                 </p>
                 <div class="flex gap-2 mt-4">
                   <a
@@ -696,7 +682,8 @@
                     View Project
                   </a>
                   <a
-                    href="https://github.com/tnttirth15/tirth.pyflask.io" target="_blank"
+                    href="https://github.com/tnttirth15/tirth.pyflask.io"
+                    target="_blank"
                     class="inline-flex items-center justify-center rounded-md w-8 h-8 border border-gray-700 bg-gray-800 text-sm font-medium text-orange-500 hover:bg-gray-700"
                   >
                     <span class="icon-text"
@@ -719,10 +706,13 @@
                 width="400"
               >
               <div class="p-4">
-                <h3 class="text-xl font-bold text-orange-500">Automated Bank Website Testing</h3>
+                <h3 class="text-xl font-bold text-orange-500">
+                  Automated Bank Website Testing
+                </h3>
                 <p class="text-sm text-gray-400 mt-2">
-                    Automated bank website testing by developing tests for login functionality, validating user accounts, and handling both successful logins and
-                    failures.
+                  Automated bank website testing by developing tests for login
+                  functionality, validating user accounts, and handling both
+                  successful logins and failures.
                 </p>
               </div>
             </div>
@@ -741,8 +731,15 @@
               <div class="p-4">
                 <h3 class="text-xl font-bold text-orange-500">CodeCanvas</h3>
                 <p class="text-sm text-gray-400 mt-2">
-                    Created a responsive and interactive portfolio website as part of the school project to showcase web development skills and completed projects. Focused on UI/UX design, cross-device compatibility, and dynamic content structure.
-                    <span id="note">Note: This project may appear slightly different from its original version due to ongoing updates and improvements.</span>
+                  Created a responsive and interactive portfolio website as part
+                  of the school project to showcase web development skills and
+                  completed projects. Focused on UI/UX design, cross-device
+                  compatibility, and dynamic content structure.
+                  <span id="note"
+                    >Note: This project may appear slightly different from its
+                    original version due to ongoing updates and
+                    improvements.</span
+                  >
                 </p>
                 <div class="flex gap-2 mt-4">
                   <a
@@ -786,17 +783,36 @@
             </div>
             <div class="w-full max-w-md space-y-4">
               <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <a href="mailto:tirth5612@gmail.com" class="flex items-center justify-center space-x-2 rounded-lg border border-gray-800 p-4 bg-gray-900 hover:bg-gray-800 transition-colors">
-                  <span class="icon-text"><i class="fa-solid fa-envelope text-orange-500"></i></span>
+                <a
+                  href="mailto:tirth5612@gmail.com"
+                  class="flex items-center justify-center space-x-2 rounded-lg border border-gray-800 p-4 bg-gray-900 hover:bg-gray-800 transition-colors"
+                >
+                  <span class="icon-text"
+                    ><i class="fa-solid fa-envelope text-orange-500"></i
+                  ></span>
                   <span class="text-white">tirth5612@gmail.com</span>
                 </a>
-                <a href="https://www.linkedin.com/in/tirth-prajapati-2b385322a/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-2 rounded-lg border border-gray-800 p-4 bg-gray-900 hover:bg-gray-800 transition-colors">
-                  <span class="icon-text"><i class="fa-brands fa-linkedin text-orange-500"></i></span>
+                <a
+                  href="https://www.linkedin.com/in/tirth-prajapati-2b385322a/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center space-x-2 rounded-lg border border-gray-800 p-4 bg-gray-900 hover:bg-gray-800 transition-colors"
+                >
+                  <span class="icon-text"
+                    ><i class="fa-brands fa-linkedin text-orange-500"></i
+                  ></span>
                   <span class="text-white">LinkedIn</span>
                 </a>
               </div>
-              <a href="https://github.com/tnttirth15/tirth.pyflask.io" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-2 rounded-lg border border-gray-800 p-4 bg-gray-900 hover:bg-gray-800 transition-colors">
-                <span class="icon-text"><i class="fa-brands fa-github text-orange-500"></i></span>
+              <a
+                href="https://github.com/tnttirth15/tirth.pyflask.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center space-x-2 rounded-lg border border-gray-800 p-4 bg-gray-900 hover:bg-gray-800 transition-colors"
+              >
+                <span class="icon-text"
+                  ><i class="fa-brands fa-github text-orange-500"></i
+                ></span>
                 <span class="text-white">GitHub</span>
               </a>
             </div>
@@ -814,9 +830,7 @@
       </p>
     </footer>
 
-    <!-- Simple JavaScript for smooth scrolling -->
     <script src="index.js"></script>
-
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </body>

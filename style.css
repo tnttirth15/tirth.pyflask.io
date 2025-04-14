@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #121212;
   color: #ffffff;
@@ -133,6 +138,90 @@ body {
   top: 0.25rem;
 }
 
+/* Navigation Styles - Always Hamburger Menu */
+.desktop-nav {
+  display: none; /* Always hide desktop nav */
+}
+
+.mobile-menu-button {
+  display: block; /* Always show hamburger button */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed; /* Fixed position for better UX */
+  top: 64px; /* Height of header */
+  left: 0;
+  right: 0;
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+  z-index: 50;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  color: #f97316;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Certification cards styling */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Fix for skill tags overflow */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: #1f1f1f;
+  color: #d1d5db;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  white-space: nowrap;
+  margin-bottom: 0.25rem;
+}
+
 /* Media Queries for better mobile responsiveness */
 @media (max-width: 640px) {
   /* Smaller text on very small screens */
@@ -173,19 +262,14 @@ body {
     font-size: 0.75rem;
   }
 
-  /* Adjust header for very small screens */
-  @media (max-width: 380px) {
-    .mobile-nav {
-      flex-direction: column;
-      align-items: flex-start;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
+  /* Certification card adjustments */
+  .cert-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .mobile-nav-links {
-      margin-top: 0.5rem;
-      margin-left: 0;
-    }
+  .cert-card-footer a {
+    margin-top: 0.75rem;
   }
 }
 
